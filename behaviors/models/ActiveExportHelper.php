@@ -4,6 +4,10 @@
 */
 class ActiveExportHelper extends CActiveRecordBehavior
 {
+	/**
+	 * named scope
+	 * @return CAtiveRecord class
+	 */
 	public function filterScope($attributes='*',$relations=array())
 	{
 		$owner=$this->getOwner();
@@ -48,13 +52,4 @@ class ActiveExportHelper extends CActiveRecordBehavior
 		}
 		return $list->toArray();
 	}
-
-	// public function JSONExport($attributes='*',$relations=array(), $additionalParams=array()){
-	// 	$data=$this->ArrayExport($attributes,$relations, $additionalParams);
-	// 	return CJSON::encode($this);
-	// }
-
-	// public function export($attributes='*',$relations=array(), $additionalParams=array()){
-
-	// }
 }
